@@ -1,0 +1,18 @@
+Got main branch working
+Switched to Native API branch
+Added config file that enables client and server testing
+
+Issues encountered:
+Config file creates issue with starting new world with current version (5.4.1)
+
+
+load development test - Done
+create a simple mod - Not done
+run server and client tests - Done
+
+t to type
+
+tests to run:
+
+.test_camera
+.test_minimap
