@@ -1,0 +1,20 @@
+Worked through the Minetest Startup Guide:
+Step 1: Intall Minetest Locally - Done
+Step 2: System Setup - Done
+Issues Encountered:
+3d.ii)  .\bootstrap-vcpkg.bat not working in console
+3d.iii) .\vcpkg integrate install generating errors
+CMAKE and VCPKG hyper links not working
+Fix:
+Clicked on the bat file in File Explorer which created the .exe
+Swap Step iii and iv in 3d
+Step 3a: SpiderMonkey DLL Linking - Done
+Issues Encountered:
+3ab) CMake generated errors
+Fix: Rerun after delete cache
+
+
+Zoom Meeting with Blanchard
+
+
+
