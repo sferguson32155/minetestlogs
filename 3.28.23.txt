@@ -1,14 +1,16 @@
-Got main branch working
-Switched to Native API branch
-Added config file that enables client and server testing
+During this development cycle, I made significant progress on the "Mine Test" project. Specifically, I was able to accomplish the following:
 
-Issues encountered:
-Config file creates issue with starting new world with current version (5.4.1)
+Successfully got the main branch working
+Switched to the Native API branch
+Added a config file that enables client and server testing
+However, I also encountered some issues during this development cycle. Specifically, the config file that I added created an issue when attempting to start a new world with the current version (5.4.1). I am currently working to resolve this issue.
 
+Progress:
 
-load development test - Done
-create a simple mod - Not done
-run server and client tests - Done
+Loaded development test - Done
+Created a simple mod - Not done
+Ran server and client tests - Done
+Moving forward, I plan to focus on addressing the issues with the config file and completing the creation of the simple mod.
 
 t to type
 
