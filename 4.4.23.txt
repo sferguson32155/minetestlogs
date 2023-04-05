@@ -1,0 +1,4 @@
+3-4 
+Zoom Team meeting where we discussed what the end goals of the project looked like and how losing Lisa as a team member will affect the developement process
+We added all members of the current team to have admin privilages in the Github incase we receive new members over the summer or next fall
+Workflow for recreating Lua files in C and testing process discussed
