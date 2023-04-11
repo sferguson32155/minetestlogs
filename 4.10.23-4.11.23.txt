@@ -1,0 +1,34 @@
+4/10
+
+Zoom meeting with Blanchard and rest of Minetest team:
+
+If it has a lua state, avoid
+Technical Electives over the summer
+
+12th 4:30pm meeting
+
+One class between us
+
+18th 3:30pm meeting
+
+11th meeting talk about class conversion
+--------------------------------------------
+4/11
+
+discuss l_craft.cpp conversion
+
+use cont char or .c_str() instead of string
+
+Switch to l_item.cpp?
+
+Cant grab from Lua State
+
+Work with Matthew Fernandez in pair programming in craft/object/item, each have 100+ functions
+
+Drop craft
+
+init.lua allows for server testing
+
+server_test.lua add server class
+
+return true, "message"
