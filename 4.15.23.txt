@@ -1,0 +1,14 @@
+1pm - 9pm
+Worked on detaching "l_rollback.cpp" from lua
+
+Can't remove NO_MAP_LOCK_REQUIRED
+
+API_FCT??
+
+Converted ModApiRollback class to nativeModApiRollback class.
+
+Removed unnecessary MAP_LOCK_REQUIRED macro from l_is_started function.
+
+Converted l_rollback_revert_actions_by and l_rollback_get_node_actions functions to n_rollback_revert_actions_by and n_rollback_get_node_actions functions.
+
+Updated function signatures in nativeModApiRollback class to match the new implementations of the functions.
