@@ -1,0 +1,8 @@
+4/16/2023 5pm
+Looked into testing current class functions
+
+Wrote functions in Lua file that utilize the C functions
+
+Worked on compiling code
+
+
