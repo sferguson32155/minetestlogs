@@ -1,0 +1,5 @@
+adding Server mod:
+
+Create new .lua > place in C:\Users\user\DIR\minetest\mods\testingnativeapi_server
+Open server_test.lua > add .lua class to "server_classes"
+Open init.lua > add "dofile(modpath .. "/'Your .lua here'.lua")"

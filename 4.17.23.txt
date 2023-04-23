@@ -1,0 +1,50 @@
+2 functions = test original lua, test native lua, compare (3 tests each)
+
+only local variables
+
+"." client
+"/" server
+
+issue with static members
+Found issue. log is passed in as a reference and is changed which can not be one in the native_rollback function.
+
+int ModApiRollback::l_native_rollback_revert_actions_by(lua_State *L)
+{
+	MAP_LOCK_REQUIRED;
+
+	std::string actor = luaL_checkstring(L, 1);
+	int seconds = luaL_checknumber(L, 2);
+	Server *server = getServer(L);
+	/*std::pair<bool, std::list<RollbackAction>> nodeActions =
+			nativeModApiRollback::n_rollback_get_node_actions(
+					server, pos, range, seconds, limit);*/
+
+	nativeModApiRollback rollback;
+	/*
+	std::pair<bool, std::list<RollbackAction>> revertActions =
+			rollback.n_rollback_revert_actions_by(server, actor, seconds);
+	*/
+	std::list<RollbackAction> revertActions = nativeModApiRollback::n_rollback_revert_actions_by(server, actor, seconds).second;
+	/*std::pair<bool, std::list<RollbackAction>> revertActions =
+			test.n_rollback_revert_actions_by(
+					server, actor, seconds);*/
+	//std::pair<bool, std::list<RollbackAction>> revertActions = nativeModApiRollback::n_rollback_revert_actions_by(server, actor, seconds);
+	if (revertActions.size() == 0) {
+		lua_pushboolean(L, false);
+		lua_newtable(L);
+		return 2;
+	}
+	std::list<std::string> log;
+	bool success = server->rollbackRevertActions(revertActions, &log);
+	// Push boolean result
+	lua_pushboolean(L, success);
+	lua_createtable(L, log.size(), 0);
+	unsigned long i = 0;
+	for (std::list<std::string>::const_iterator iter = log.begin(); iter != log.end();
+			++i, ++iter) {
+		lua_pushnumber(L, i);
+		lua_pushstring(L, iter->c_str());
+		lua_settable(L, -3);
+	}
+	return 2;
+}
