@@ -1,0 +1,6 @@
+Started working onfixing bug issue with native api build
+Error: can not find source file jsapi.h
+
+Has something to do with minetest branch
+
+Saving branched files to PC and reinstalling
